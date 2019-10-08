@@ -1,5 +1,15 @@
 class UsersController < ApplicationController
 
+  def new
+  end
+
+  def create
+    if user.create(user_params)
+      flash[:sucess] = "アカウントが登録されました"
+    else
+      render ""
+  end
+
   def edit
   end
 
